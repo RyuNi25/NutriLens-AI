@@ -1,0 +1,10 @@
+{
+  "name": "NutriLens AI",
+  "description": "Premium AI-powered nutrition and wellness companion that analyzes food images and tracks nutritional progress.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

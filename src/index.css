@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-brand-green: #1A2E22;
+  --color-brand-cream: #FDFCF7;
+  --color-brand-beige: #E5E1D5;
+  --color-brand-sage: #6B705C;
+  --color-brand-clay: #A5A58D;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-cream text-neutral-900 font-sans antialiased selection:bg-brand-green selection:text-brand-cream;
+  }
+  
+  h1, h2, h3 {
+    @apply tracking-tight;
+  }
+}
+
+@utility glass {
+  @apply bg-white/40 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_0_rgba(26,46,34,0.03)];
+}
+
+@utility bento-card {
+  @apply glass rounded-[2.5rem] p-8 transition-all duration-500 hover:shadow-[0_20px_50px_-12px_rgba(26,46,34,0.08)] hover:-translate-y-1 cursor-default;
+}
+
+@utility editorial-heading {
+  @apply font-serif italic tracking-tight leading-[0.9];
+}
+
+@utility vertical-rail {
+  @apply [writing-mode:vertical-rl] rotate-180 text-[10px] uppercase tracking-[0.2em] font-bold text-neutral-300;
+}
+
+@utility oval-mask {
+  @apply rounded-[100%] aspect-[3/4] object-cover;
+}
+
+@keyframes slow-pan {
+  from { transform: scale(1); }
+  to { transform: scale(1.1) rotate(1deg); }
+}
+
+.animate-slow-pan {
+  animation: slow-pan 20s ease-in-out infinite alternate;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
